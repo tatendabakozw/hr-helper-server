@@ -4,6 +4,7 @@ require("dotenv").config();
 const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
+const connectDB = require("./utils/mongo");
 
 // intantiating app object
 const app = express();
@@ -17,6 +18,9 @@ app.use(cors());
 app.use(helmet());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// connect database
+connectDB()
 
 // get item on default route
 app.get("/", (req, res) => {
