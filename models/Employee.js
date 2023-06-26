@@ -18,14 +18,10 @@ const employeeSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    first_name: {
-      type: String,
-      required: true,
-    },
     role: {
-      type: String,
-      enum: ["employee", "hr"],
-      default: "employee",
+      type: String, // software developer
+      default: "",
+      required: true,
     },
     salary: {
       type: String,
@@ -34,7 +30,7 @@ const employeeSchema = new mongoose.Schema(
     gender: {
       type: String,
     },
-    id: {
+    national_id: {
       type: String,
       required: true,
     },
@@ -42,14 +38,29 @@ const employeeSchema = new mongoose.Schema(
       type: String,
       enum: ["remote", "office"],
     },
+    company: {
+      type: String,
+      required: true,
+      default: "",
+    },
     hr: {
+      type: String,
+      required: true,
+      default: "",
+    },
+    hr: {
+      type: String,
+      required: true,
+      default: "",
+    },
+    photoURL: {
       type: String,
       default: "",
     },
-    photoURL:{
+    job_title: {
       type: String,
-      default:''
-    }
+      default: "",
+    },
   },
   {
     timestamps: true,

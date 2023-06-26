@@ -31,6 +31,8 @@ app.get("/", (req, res) => {
 
 // user defined routes go here
 app.use('/auth', require('./routes/auth'))
+app.use('/company', require('./routes/company'))
+app.use('/employee', require('./routes/employee'))
 
 //not found handler
 app.use((req, res, next) => {
