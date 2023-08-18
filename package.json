@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -21,5 +22,8 @@
   },
   "devDependencies": {
     "dotenv": "^16.0.3"
+  },
+  "engines": {
+    "node": ">=14.20.1 <15"
   }
 }
